@@ -31,6 +31,8 @@
 #include "maths.h"
 #include "opengl.h"
 
+#include "defines.h"
+
 /* these required sequence enumerations...*/
 #include "bh_pred.h"
 #include "bh_alien.h"

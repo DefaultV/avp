@@ -24,6 +24,8 @@
 #include "huddefs.h"
 #include "showcmds.h"
 
+#include "defines.h"
+
 /* externs for this file */
 extern int NormalFrameTime;
 extern char *ModuleCurrVisArray;

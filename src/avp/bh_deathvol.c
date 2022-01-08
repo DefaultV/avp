@@ -10,6 +10,8 @@
 #include "dynamics.h"
 #include "weapons.h"
 
+#include "defines.h"
+
 #define UseLocalAssert Yes
 #include "ourasert.h"
 

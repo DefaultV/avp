@@ -52,6 +52,8 @@
 #include "hud.h"
 #include "chnkload.h"
 
+#include "defines.h"
+
 extern int ScanDrawMode;
 
 #define DO_PREDATOR_OVERLAY No

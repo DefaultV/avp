@@ -36,6 +36,8 @@
 #include "bh_track.h"
 #include "scream.h"
 
+#include "defines.h"
+
 /* external global variables used in this file */
 extern int ModuleArraySize;
 extern char *ModuleCurrVisArray;

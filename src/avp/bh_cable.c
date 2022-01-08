@@ -14,6 +14,8 @@
 #include "ourasert.h"
 #include "plat_shp.h"
 
+#include "defines.h"
+
 extern int NormalFrameTime;
 extern char *ModuleCurrVisArray;
 

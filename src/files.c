@@ -16,6 +16,8 @@
 #include "fixer.h"
 #include "files.h"
 
+#include "defines.h"
+
 static char *local_dir;
 static char *global_dir;
 

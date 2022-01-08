@@ -15,6 +15,8 @@
 
 #include "fixer.h"
 
+#include "defines.h"
+
 #include "3dc.h"
 #include "platform.h"
 #include "inline.h"
