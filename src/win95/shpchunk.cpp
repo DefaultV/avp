@@ -191,17 +191,17 @@ void Shape_Chunk::post_input_processing()
 	
 	for (int i=0; i<shape_data_store->num_verts; i++)
 	{
-		max.x = max(max.x, shape_data_store->v_list[i].x);
-		max.y = max(max.y, shape_data_store->v_list[i].y);
-		max.z = max(max.z, shape_data_store->v_list[i].z);
+		max.x = std::max(max.x, shape_data_store->v_list[i].x);
+		max.y = std::max(max.y, shape_data_store->v_list[i].y);
+		max.z = std::max(max.z, shape_data_store->v_list[i].z);
 
-		min.x = min(min.x, shape_data_store->v_list[i].x);
-		min.y = min(min.y, shape_data_store->v_list[i].y);
-		min.z = min(min.z, shape_data_store->v_list[i].z);
+		min.x = std::min(min.x, shape_data_store->v_list[i].x);
+		min.y = std::min(min.y, shape_data_store->v_list[i].y);
+		min.z = std::min(min.z, shape_data_store->v_list[i].z);
 		
 		float temp_rad =(float) mod(shape_data_store->v_list[i]);
 		
-		radius = max (radius, temp_rad);
+		radius = std::max(radius, temp_rad);
 	}
 
 	shape_data_store->max = max;
@@ -1459,7 +1459,7 @@ void Shape_Header_Chunk::prepare_for_output()
 
 	}
 
-	Shape_Chunk::max_id = max(Shape_Chunk::max_id, file_id_num);
+	Shape_Chunk::max_id = std::max(Shape_Chunk::max_id, file_id_num);
 
 // this should always be the last thing
 
@@ -1783,7 +1783,7 @@ void Shape_Morphing_Data_Chunk::prepare_for_output()
 	
 	for (; !cli.done(); cli.next())
 	{
-		max_id = max (max_id, ((Shape_Sub_Shape_Chunk *)cli())->get_header()->file_id_num);
+		max_id = std::max(max_id, ((Shape_Sub_Shape_Chunk *)cli())->get_header()->file_id_num);
 	}
 
 	for (cli.restart(); !cli.done(); cli.next())

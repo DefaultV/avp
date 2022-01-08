@@ -46,15 +46,6 @@ extern "C" {
 #define PACKED_POP
 #define PACKED __attribute__((packed))
 
-/* windows junk */
-#ifndef min
-#define min(a, b) (((a) < (b)) ? (a) : (b))
-#endif
-
-#ifndef max
-#define max(a, b) (((a) > (b)) ? (a) : (b))
-#endif
-
 #define __cdecl
 
 #define NO_ERROR	0

@@ -167,7 +167,7 @@ void setup_paths(RIFFHANDLE h)
 	for(; !plif.done(); plif.next())
 	{
 		AVP_Path_Chunk* apc=(AVP_Path_Chunk*) plif();
-		PathArraySize=max(PathArraySize,apc->PathID+1);	
+		PathArraySize=std::max(PathArraySize,apc->PathID+1);	
 	}
 
 	PathArray=(PATHHEADER*)PoolAllocateMem(sizeof(PATHHEADER)*PathArraySize);
@@ -187,7 +187,7 @@ void setup_paths(RIFFHANDLE h)
 		int length=apc->PathLength;
 		if(apc->flags & PathFlag_BackAndForth)
 		{
-			length=max(length,(length-1)*2);
+			length=std::max(length,(length-1)*2);
 		}
 		
 		path->modules_in_path=(AIMODULE**)PoolAllocateMem(sizeof(AIMODULE*)*length);
@@ -463,7 +463,7 @@ Global_Hierarchy_Store::Global_Hierarchy_Store (RIFFHANDLE h)
 	for(; !chlif.done(); chlif.next())
 	{
 		Indexed_Sound_Chunk* isc=(Indexed_Sound_Chunk*)chlif();
-		max_index=max(max_index,isc->index);
+		max_index=std::max(max_index,isc->index);
 	}
 	//now create a large enough array , and fill it in
    	num_sounds=max_index+1;
@@ -716,7 +716,7 @@ void Global_Hierarchy_Store::setup_alternate_shape_sets(List <Object_ShapeNum_Pa
 	for(chlif.restart();!chlif.done();chlif.next())
 	{
 		Hierarchy_Shape_Set_Collection_Chunk* coll=(Hierarchy_Shape_Set_Collection_Chunk*)chlif();
-		max_index=max(max_index,coll->Set_Collection_Num);	
+		max_index=std::max(max_index,coll->Set_Collection_Num);	
 	}
 
 	if(max_index==-1) return;
@@ -988,11 +988,11 @@ SECTION * Global_Hierarchy_Store::build_hierarchy (Object_Hierarchy_Chunk * ohc,
 					if (frame_no<seq->num_frames)
 					{
 						//calculate sequence length , making sure it doesn't overflow an unsigned short
-						kfd->Sequence_Length =(unsigned short) min(seq->frames[frame_no].at_frame_no - this_frame_no,65535);
+						kfd->Sequence_Length =(unsigned short) std::min((long int)seq->frames[frame_no].at_frame_no - this_frame_no, (long int)65535);
 					}
 					else
 					{
-						kfd->Sequence_Length =(unsigned short) min(65536 - this_frame_no,65535);
+						kfd->Sequence_Length =(unsigned short) std::min(65536 - this_frame_no,65535);
 					}
 					
 				}
@@ -1196,11 +1196,11 @@ SECTION * Global_Hierarchy_Store::build_hierarchy (Object_Hierarchy_Chunk * ohc,
 					if (frame_no<num_frames)
 					{
 						//calculate sequence length , making sure it doesn't overflow an unsigned short
-						kfd->Sequence_Length =(unsigned short) min(frame_array[frame_no]->at_frame_no - this_frame_no,65535);
+						kfd->Sequence_Length =(unsigned short) std::min((long int)frame_array[frame_no]->at_frame_no - this_frame_no, (long int)65535);
 					}
 					else
 					{
-						kfd->Sequence_Length =(unsigned short) min(65536 - this_frame_no , 65535);
+						kfd->Sequence_Length =(unsigned short) std::min(65536 - this_frame_no , 65535);
 					}
 				}
 				//sort out some settings for the last frame
