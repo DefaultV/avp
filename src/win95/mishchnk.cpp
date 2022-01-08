@@ -1,7 +1,7 @@
 #include "chunk.hpp"
 #include "chnktype.hpp"
 #include "mishchnk.hpp"
-
+#include <algorithm>
 #include "shpchunk.hpp"
 #include "obchunk.hpp"
 

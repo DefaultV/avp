@@ -1,4 +1,5 @@
 #include <string.h>
+#include <algorithm>
 #include "bmpnames.hpp"
 #include "mishchnk.hpp"
 

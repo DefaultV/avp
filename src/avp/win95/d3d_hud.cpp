@@ -4,8 +4,9 @@
 	so this file will hold all Direct 3D hud code.
 
  */
+#ifdef __c
 extern "C" {
-
+#endif
 // Mysterious definition required by objbase.h 
 // (included via one of the include files below)
 // to start definition of obscure unique in the
@@ -928,5 +929,6 @@ void DrawPredatorEnergyBar(void)
 	}
 
 }
-
-};
+#ifdef __c
+}
+#endif

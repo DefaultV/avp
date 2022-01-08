@@ -2,7 +2,10 @@
 * ddplat.cpp - this contains all the display code for the HUD, menu screens and so forth. *
 *                                                                                         *
 **************************************************************************************KJL*/
+
+#ifdef __c
 extern "C" {
+#endif
 
 #include "3dc.h"
 #include "module.h"
@@ -1567,4 +1570,6 @@ static void SetupScanlinePoly(char const *filenamePtr, int width)
 }
 #endif // SBF
 
+#ifdef __c
 }; // extern 
+#endif

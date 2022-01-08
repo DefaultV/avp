@@ -171,7 +171,7 @@ static void PasteFromClipboard(char* Text,int MaxTextLength);
 */
 SAVE_SLOT_HEADER SaveGameSlot[NUMBER_OF_SAVE_SLOTS];
 
-
+extern void PlayBinkedFMV(char *filenamePtr, int volume);
 extern int VideoModeNotAvailable;
 
 extern int RealFrameTime;

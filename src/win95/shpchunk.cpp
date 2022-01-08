@@ -1,4 +1,5 @@
 #include <math.h>
+#include <algorithm>
 #include "unaligned.h"
 #include "chunk.hpp"
 #include "chnktype.hpp"

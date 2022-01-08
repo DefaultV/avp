@@ -3,7 +3,7 @@
 
 #include "unaligned.h"
 
-#ifdef __cplusplus
+#ifdef __c
 
 	extern "C" {
 
@@ -292,7 +292,7 @@ extern STRATEGYBLOCK *ActiveStBlockList[];
 				(*(((unaligned_s32*)name1) + 1) == '\0'))
 	
 
-#ifdef __cplusplus
+#ifdef __c
 
 	};
 

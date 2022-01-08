@@ -26,6 +26,9 @@ extern int			UpdateBinkFMV(FMVHandle aFmvHandle, int volume);
 extern void 		CloseBinkFMV(FMVHandle aFmvHandle);
 extern char*		GetBinkFMVImage(FMVHandle aFmvHandle);
 
-
+typedef struct binkMovie movie;
+void ClearScreenToBlack();
+void FlipBuffers();
+int BinkDecodeFrame(struct binkMovie* aMovie);
 
 #endif //_BINK_H_

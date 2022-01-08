@@ -1,7 +1,9 @@
 /* KJL 15:17:31 10/12/98 - user profile stuff */
 #include "list_tem.hpp"
+#ifdef __c
 extern "C"
 {
+#endif
 #include "3dc.h"
 #include "inline.h"
 #include "module.h"
@@ -323,4 +325,6 @@ extern void FixCheatModesInUserProfile(AVP_USER_PROFILE *profilePtr)
 
 }
 
+#ifdef __c
 }; // extern "C"
+#endif

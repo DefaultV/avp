@@ -11,8 +11,9 @@
 #define UseLocalAssert Yes
 #include "ourasert.h"
 
-extern "C"
-{
+#ifdef __c
+extern "C" {
+#endif 
 #include "module.h"
 #include "inline.h"
 
@@ -786,6 +787,8 @@ void CreateGameSpecificConsoleCommands(void)
 		DisplaySavesLeft
 	);
 
-}	
+}
 
-} // extern "C"
+#ifdef __c
+}
+#endif

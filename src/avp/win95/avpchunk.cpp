@@ -1,5 +1,6 @@
 #include "avpchunk.hpp"
 #include "md5.h"
+#include <algorithm>
 //#include "strachnk.hpp"
 //#include "obchunk.hpp"
 

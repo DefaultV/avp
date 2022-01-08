@@ -1,5 +1,7 @@
 #define DB_LEVEL 2
 
+#include <algorithm>
+
 #include "3dc.h"
 #include "inline.h"
 #include "module.h"

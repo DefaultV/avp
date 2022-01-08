@@ -1021,7 +1021,9 @@ extern void NetSendMessages(void);
 extern void EndAVPNetGame(void);
 extern int PlayerIdInPlayerList(DPID Id);
 //use assignnewsbname instead of addnetgameobjectid
+#ifdef __c
 #define AddNetGameObjectID AssignNewSBName
+#endif
 extern void AddNetGameObjectID(STRATEGYBLOCK *sbPtr);
 extern void RecordFinalNetGameScores(void);
 extern void DoNetScoresForHostDeath(NETGAME_CHARACTERTYPE myType,NETGAME_CHARACTERTYPE killerType);

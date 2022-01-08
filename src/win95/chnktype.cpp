@@ -1,5 +1,6 @@
 #include "chunk.hpp"
 #include <math.h>
+#include <algorithm>
 #include "chnktype.hpp"
 
 #define UseLocalAssert No

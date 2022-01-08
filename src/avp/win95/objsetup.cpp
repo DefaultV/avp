@@ -1,6 +1,7 @@
 #define DB_LEVEL 1
 
 #include <stdlib.h>
+#include <algorithm>
 
 #include "list_tem.hpp"
 #include "chnkload.hpp"
